@@ -1,31 +1,59 @@
 ---
-title: dumi-plugin-code-snippets
+title: dumi-plugin-code-editor
 ---
 
-<br>
+## Demo
 
-## 从现有文件中导入代码片段
+### js
 
-> 该功能完全借鉴的 [VitePress - Import Code Snippets](https://vitepress.dev/guide/markdown#import-code-snippets)，理论上写法完全一致。
+```js
+import { defineConfig } from 'dumi';
 
-<br>
-
-**Snippets** <i>./snippets/install.bash</i>
-
-<<< ./snippets/install.bash
-
-**Input**
-
-```markdown
-<<< ./snippets/install.bash{2}
+// more config: https://d.umijs.org/config
+export default defineConfig({
+  plugins: [
+    // https://github.com/Wxh16144/dumi-plugin-code-editor
+    'dumi-plugin-code-editor',
+  ],
+  // more
+});
 ```
 
-**Output**
+### ts
 
-<<< ./snippets/install.bash{2}
+```ts
+const foo: string = 'bar';
+console.log(foo);
+```
+
+### jsx
+
+```jsx
+import React from 'react';
+
+const App = () => {
+  return <div>hello, dumi-plugin-code-editor</div>;
+};
+
+export default App;
+```
+
+### tsx
+
+```tsx
+import React from 'react';
+
+const App: React.FC = () => {
+  return <div>hello, dumi-plugin-code-editor</div>;
+};
+
+export default App;
+```
 
 ---
 
-### Enable
+## Source Code
 
-<<< @/../README.md#enable
+> use [dumi-plugin-code-snippets](https://github.com/Wxh16144/dumi-plugin-code-snippets) to display source code
+
+<<< @/docs/index.md

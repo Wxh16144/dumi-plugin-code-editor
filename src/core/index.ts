@@ -1,3 +1,2 @@
-export { default as remarkPlugin } from './remarkPlugin';
-
-export type { IProps as RemarkPluginProps } from './remarkPlugin';
+export { default as rehypePlugin } from './rehypePlugin';
+export * from './rehypePlugin';

@@ -7,13 +7,20 @@ const isProd = process.env.NODE_ENV === 'production';
 const isProdSite = process.env.PREVIEW !== '1' && isProd;
 
 export default defineConfig({
-  plugins: [name],
+  plugins: [
+    // https://github.com/Wxh16144/dumi-plugin-code-snippets
+    'dumi-plugin-code-snippets',
+    name
+  ],
 
   themeConfig: {
-    name: 'code-snippets',
+    name: 'code-editor',
     socialLinks: {
       github: homepage,
     },
+  },
+  resolve: {
+    codeBlockMode: 'passive',
   },
   outputPath: resolve(__dirname, '../.doc'),
   base: isProdSite ? `/${name}/` : '/',

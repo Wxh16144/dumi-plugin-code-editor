@@ -1,17 +1,17 @@
 {
-  "name": "dumi-plugin-code-snippets",
-  "version": "1.2.0",
-  "description": "Dumi Plugin - Import code snippets from existing files",
+  "name": "dumi-plugin-code-editor",
+  "version": "0.0.0",
+  "description": "Dumi Plugin - Code Editor(Readonly)",
   "keywords": [
     "dumi"
   ],
-  "homepage": "https://github.com/Wxh16144/dumi-plugin-code-snippets#readme",
+  "homepage": "https://github.com/Wxh16144/dumi-plugin-code-editor#readme",
   "bugs": {
-    "url": "https://github.com/Wxh16144/dumi-plugin-code-snippets/issues/new"
+    "url": "https://github.com/Wxh16144/dumi-plugin-code-editor/issues/new"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wxh16144/dumi-plugin-code-snippets.git"
+    "url": "https://github.com/Wxh16144/dumi-plugin-code-editor.git"
   },
   "license": "MIT",
   "author": "Wxh16144(wxh1220@gmail.com)",
@@ -37,7 +37,7 @@
     "ci": "npm run lint && npm run type-check && npm run doctor && npm run build",
     "clean": "rm -rf es lib dist coverage playground/.dumi/tmp* .eslintcache .doc",
     "debug": "rm -rf playground/.dumi/tmp* playground/node_modules/.cache && npm run dev",
-    "dev": "pnpm run --filter playground dev",
+    "dev": "pnpm run --filter playground start",
     "docs:build": "pnpm run --filter playground build",
     "doctor": "father doctor",
     "lint": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
@@ -62,10 +62,6 @@
       "eslint --fix",
       "prettier --parser=typescript --write"
     ]
-  },
-  "dependencies": {
-    "enhanced-resolve": "^5.15.0",
-    "fs-extra": "^11.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17",
@@ -109,5 +105,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
+    "monaco-editor": "^0.52.2"
   }
 }
