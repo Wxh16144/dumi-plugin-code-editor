@@ -5,10 +5,12 @@
     "build": "dumi build",
     "dev": "dumi dev",
     "prepare": "dumi setup",
-    "start": "npm run dev"
+    "start": "hard-load && npm run dev"
   },
   "devDependencies": {
+    "hard-load":"latest",
     "dumi": "^2",
-    "dumi-plugin-code-snippets": "workspace:*"
+    "dumi-plugin-code-snippets": "^1.2.0",
+    "dumi-plugin-code-editor": "workspace:*"
   }
 }
